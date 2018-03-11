@@ -12,7 +12,7 @@ class LoginButton extends Component {
                 </View>
             </TouchableOpacity>
             </View>
-        )
+        );
     }
 }
 
