@@ -17,6 +17,6 @@ module.exports = StyleSheet.create(
         paddingHorizontal: 7,
         alignItems: "center",
         justifyContent: "center",
-      },
+      }
     }
 )
