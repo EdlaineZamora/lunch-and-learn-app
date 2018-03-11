@@ -6,7 +6,7 @@ import NewAccount from '../newAccount/NewAccount.js';
 import LoginButton from '../loginButton/LoginButton.js';
 import Styles from './Styles.js';
 
-const mark = require("../logo.jpg");
+const mark = require("./logo.jpg");
 
 export default class LoginScreen extends Component {
   render() {
