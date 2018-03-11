@@ -10,49 +10,41 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
 
 const { width, height } = Dimensions.get("window");
 
-const background = require("./login1_bg.png");
-const mark = require("./login1_mark.png");
-const lockIcon = require("./login1_lock.png");
-const personIcon = require("./login1_person.png");
+const mark = require("./logo.jpg");
 
 export default class LoginScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <Image source={require("./login1_bg.png")} style={styles.background} resizeMode="cover"> */}
           <View style={styles.markWrap}>
             <Image source={mark} style={styles.mark} resizeMode="contain" />
           </View>
           <View style={styles.wrapper}>
-            <View style={styles.inputWrap}>
+            <View style={styles.inputUserWrap}>
               <View style={styles.iconWrap}>
-                <Image source={personIcon} style={styles.icon} resizeMode="contain" />
+                <Ionicons name='ios-person' size={20} />
               </View>
               <TextInput 
-                placeholder="Username" 
-                placeholderTextColor="#FFF"
+                placeholder="Usuário" 
+                placeholderTextColor="#000"
                 style={styles.input} 
               />
             </View>
-            <View style={styles.inputWrap}>
+            <View style={styles.inputPasswordWrap}>
               <View style={styles.iconWrap}>
-                <Image source={lockIcon} style={styles.icon} resizeMode="contain" />
+              <Ionicons name='ios-lock' size={20} />
               </View>
               <TextInput 
-                placeholderTextColor="#FFF"
-                placeholder="Password" 
+                placeholderTextColor="#000"
+                placeholder="Senha" 
                 style={styles.input} 
                 secureTextEntry 
               />
             </View>
-            <TouchableOpacity activeOpacity={.5}>
-              <View>
-                <Text style={styles.forgotPasswordText}>Esqueceu sua senha?</Text>
-              </View>
-            </TouchableOpacity>
             <TouchableOpacity activeOpacity={.5}>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Logar</Text>
@@ -64,12 +56,11 @@ export default class LoginScreen extends Component {
               <Text style={styles.accountText}>Não tem uma conta?</Text>
               <TouchableOpacity activeOpacity={.5}>
                 <View>
-                  <Text style={styles.signupLinkText}>Sign Up</Text>
+                  <Text style={styles.signupLinkText}>Cadastrar</Text>
                 </View>
               </TouchableOpacity>
             </View>
           </View>
-        {/* </Image> */}
       </View>
     );
   }
@@ -94,7 +85,14 @@ const styles = StyleSheet.create({
   wrapper: {
     paddingVertical: 30,
   },
-  inputWrap: {
+  inputUserWrap: {
+    flexDirection: "row",
+    marginVertical: 10,
+    height: 40,
+    borderBottomWidth: 2,
+    borderBottomColor: "#CCC"
+  },
+  inputPasswordWrap: {
     flexDirection: "row",
     marginVertical: 10,
     height: 40,
@@ -115,7 +113,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   button: {
-    backgroundColor: "#FF3366",
+    backgroundColor: "#3c6fc1",
     paddingVertical: 20,
     alignItems: "center",
     justifyContent: "center",
@@ -125,23 +123,18 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontSize: 18,
   },
-  forgotPasswordText: {
-    color: "#D8D8D8",
-    backgroundColor: "transparent",
-    textAlign: "right",
-    paddingRight: 15,
-  },
   signupWrap: {
     backgroundColor: "transparent",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    color: 'black'
   },
   accountText: {
-    color: "#D8D8D8"
+    color: "#000"
   },
   signupLinkText: {
-    color: "#FFF",
+    color: "#000",
     marginLeft: 5,
   }
 });

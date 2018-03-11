@@ -1,16 +1,16 @@
 import React from 'react';
 import {Constants} from 'expo';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, ImageBackground } from 'react-native';
 import LoginScreen from './src/components/LoginScreen.js';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <MobileFlashCardStatusBar backgroundColor={"#000"} barStyle="light-content"/>
-        <Text>Login2!</Text>        
-        <LoginScreen></LoginScreen>
-      </View>
+        <View style={styles.container}>
+          <MobileFlashCardStatusBar backgroundColor={"#000"} barStyle="light-content"/>
+            <Text>Lunch & Learn</Text>        
+            <LoginScreen />
+        </View>
     );
   }
 }
@@ -26,8 +26,11 @@ const MobileFlashCardStatusBar = ({ backgroundColor, ...props }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'center',
   },
 });
