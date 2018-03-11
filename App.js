@@ -1,7 +1,7 @@
 import React from 'react';
 import {Constants} from 'expo';
 import { StyleSheet, Text, View, StatusBar, ImageBackground } from 'react-native';
-import LoginScreen from './src/components/LoginScreen.js';
+import LoginScreen from './src/components/loginScreen/LoginScreen.js';
 
 export default class App extends React.Component {
   render() {
