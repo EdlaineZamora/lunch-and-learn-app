@@ -10,7 +10,9 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import User from './user/User.js'
+import Password from './password/Password.js'
 
 const { width, height } = Dimensions.get("window");
 
@@ -24,27 +26,8 @@ export default class LoginScreen extends Component {
             <Image source={mark} style={styles.mark} resizeMode="contain" />
           </View>
           <View style={styles.wrapper}>
-            <View style={styles.inputUserWrap}>
-              <View style={styles.iconWrap}>
-                <Ionicons name='ios-person' size={20} />
-              </View>
-              <TextInput 
-                placeholder="Usuário" 
-                placeholderTextColor="#000"
-                style={styles.input} 
-              />
-            </View>
-            <View style={styles.inputPasswordWrap}>
-              <View style={styles.iconWrap}>
-              <Ionicons name='ios-lock' size={20} />
-              </View>
-              <TextInput 
-                placeholderTextColor="#000"
-                placeholder="Senha" 
-                style={styles.input} 
-                secureTextEntry 
-              />
-            </View>
+            <User />
+            <Password />
             <TouchableOpacity activeOpacity={.5}>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Logar</Text>
@@ -84,13 +67,6 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     paddingVertical: 30,
-  },
-  inputUserWrap: {
-    flexDirection: "row",
-    marginVertical: 10,
-    height: 40,
-    borderBottomWidth: 2,
-    borderBottomColor: "#CCC"
   },
   inputPasswordWrap: {
     flexDirection: "row",
