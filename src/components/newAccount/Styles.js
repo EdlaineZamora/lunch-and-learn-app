@@ -8,8 +8,7 @@ module.exports = StyleSheet.create({
         backgroundColor: "transparent",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
-        color: 'black'
+        justifyContent: "center"
     },
     accountText: {
         color: "#000"

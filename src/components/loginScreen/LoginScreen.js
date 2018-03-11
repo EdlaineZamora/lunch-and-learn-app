@@ -1,16 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions,
-  TextInput,
-  Button,
-  TouchableOpacity
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { View, Image } from 'react-native';
 import User from '../user/User.js';
 import Password from '../password/Password.js';
 import NewAccount from '../newAccount/NewAccount.js';
